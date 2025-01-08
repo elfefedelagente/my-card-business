@@ -66,3 +66,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+body {
+  font-size: 16px;
+  padding: 20px;
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 15px;
+  }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

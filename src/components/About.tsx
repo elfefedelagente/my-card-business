@@ -1,10 +1,9 @@
-import React from 'react';
-import styles from '../styles/styles.css';
+import style from '../styles/about.module.css';
 
-const CardBusiness = () => {
+const About = () => {
     return (
-        <div style={{ border: "1px solid #ddd", padding: "20px", borderRadius: "8px" }}> 
-            <h1 > Soy Cabaña Federico </h1>
+        <div > 
+            <h1 className={style.title}> Soy Cabaña Federico </h1>
             <p > Analista programador universitario / Licenciatura en sistema </p>
             <br />
             <p>¡Hola! Soy Cabaña Federico, estudiante de Analista Programador Universitario y de la Licenciatura en Sistemas en la <strong>Universidad Nacional de la Patagonia San Juan Bosco</strong>. 
@@ -18,4 +17,4 @@ const CardBusiness = () => {
     );
 };
 
-export default CardBusiness; 
+export default About; 

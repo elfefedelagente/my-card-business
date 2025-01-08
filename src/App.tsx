@@ -1,13 +1,10 @@
-
-import React from "react";
-import About from "./components/about";
-import Portfolio from "./components/portfolio";
-import CardBusiness from "./components/Body";
+import About from "./components/About";
 import style from './styles/menuNav.module.css'
-
+import background from "./styles/background.module.css"
 const App = () => {
   return (
     <div>
+      
         {/**
          * Menu de navegación
          */}
@@ -23,16 +20,13 @@ const App = () => {
                 </ul>
             </nav>
         </div>
-      </header>
-      <body>
+      </header>      
         <main>
-          <section id="inicio">
-            <h2>Inicio</h2>
-            
-          </section>
-
-          <section id="acerca-de-mi">
-            <h2>Acerca de mi</h2>          
+          <section id="inicio"  className={background.cpu} />            
+          <section id="acerca-de-mi" >
+            <h2>Acerca de mi</h2>    
+            <img src="/images/Egresado.png" alt="foto mia" className={background.imagenAboutMe}/>      
+            <About/>
           </section>
 
           <section id="educacion">
@@ -46,8 +40,7 @@ const App = () => {
           <section id="contacto">
             <h2>Contacto</h2>          
           </section>
-        </main>
-      </body>     
+        </main>      
       <footer>
         <p>© 2025 Business Card App</p>
       </footer>

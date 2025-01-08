@@ -1,0 +1,25 @@
+.cpu {
+    background-image: url('/images/CPU.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.text {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.imagenAboutMe {
+    
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #000;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+  }

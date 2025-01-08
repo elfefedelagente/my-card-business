@@ -1,5 +1,4 @@
-import React from "react";
-
+//@ts-ignore
 const SocialIcons = () => {
     return (
         <div>

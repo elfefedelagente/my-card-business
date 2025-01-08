@@ -1,14 +1,22 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
   }
   
 nav {
-    position: fixed; /* Fija el menú */
+    position: fixed; 
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    margin: 0 auto;
     background-color: #333;
+    transform: translateX(-50%);
     z-index: 10;
+    width: 35%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center; 
+    border-radius: 8px; 
   }
 
 nav ul {
@@ -32,7 +40,7 @@ nav ul li a {
 
   nav ul li a:hover {
     background-color: #555;
-    border-radius: 5px;
+    border-radius: 10px;
   }
   
   section {

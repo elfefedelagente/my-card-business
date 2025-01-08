@@ -1,6 +1,5 @@
-import React from "react";
 
-
+//@ts-ignore
 const Home = () => {
     return (
         <div>
