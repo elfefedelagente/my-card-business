@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React from "react";
+import About from "./components/about";
+import Portfolio from "./components/portfolio";
+import CardBusiness from "./components/Body";
+import style from './styles/menuNav.module.css'
 
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div>
+        {/**
+         * Menu de navegación
+         */}
+      <header>
+        <div >
+            <nav className={style.nav}>
+                <ul >
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca-de-mi">Acerca de mi</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#mis-proyectos">Mis proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+      </header>
+      <body>
+        <main>
+          <section id="inicio">
+            <h2>Inicio</h2>
+            
+          </section>
 
-export default App
+          <section id="acerca-de-mi">
+            <h2>Acerca de mi</h2>          
+          </section>
+
+          <section id="educacion">
+            <h2>Educación</h2>        
+          </section>
+
+          <section id="mis-proyectos">
+            <h2>Mis proyectos</h2>          
+          </section>
+
+          <section id="contacto">
+            <h2>Contacto</h2>          
+          </section>
+        </main>
+      </body>     
+      <footer>
+        <p>© 2025 Business Card App</p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
