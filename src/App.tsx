@@ -1,9 +1,9 @@
 import AboutSection from "./components/About";
 import style from './styles/menuNav.module.css'
-import background from "./styles/background.module.css"
+import background from "./styles/background.module.css";
 import ContactIcon from "./components/ContactIcon";
-import aboutStyle from './styles/about.module.css'
-import { Link } from 'react-scroll'
+import aboutStyle from './styles/about.module.css';
+import { Link } from 'react-scroll';
 
 const App = () => {
   return (
