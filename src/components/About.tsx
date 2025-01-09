@@ -53,7 +53,7 @@ const About = () => {
 const AboutSection = () => {
     return (
       <div>  
-        <img src="images/perfil_git_page.jpg" alt="foto mía" className={style.imagenAboutMe} />
+        <img src="/my-card-business/images/perfil_git_page.jpg" alt="foto mía" className={style.imagenAboutMe} />
         <About />
       </div>
     );
