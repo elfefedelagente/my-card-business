@@ -9,7 +9,7 @@ export default defineConfig({
   base: "https://elfefedelagente.github.io/my-card-business"
 })
 */
-export default defineConfig(({ command, mode }) => ({
+export default defineConfig(({ command }) => ({
   plugins: [react()],
   base: command === 'build' 
     ? "https://elfefedelagente.github.io/my-card-business" 

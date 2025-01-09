@@ -3,6 +3,7 @@
     background-size: cover;
     background-position: center;
     height: 100vh; 
+    width: 100vw;
     display: flex;
     align-items: center; 
     justify-content: center;
@@ -15,11 +16,72 @@
 }
 
 .imagenAboutMe {
-    
-    height: auto; 
+    min-height: auto; 
     display: block;
     margin: 0 auto;
     border: 1px solid #000;
     border-radius: 50%;
     aspect-ratio: 1 / 1;
   }
+
+  .container {
+    background: linear-gradient(145deg, rgba(99, 94, 27, 0.85), rgba(40, 40, 40, 0.85));
+    border-radius: 15px; /* Esquinas más suaves */
+    padding: 30px; /* Más espacio interno */
+    max-width: 700px; /* Ancho un poco mayor */
+    margin: 50px auto; /* Centrado */
+    color: #f5f5f5; /* Texto más claro */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4); /* Sombra más destacada */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 300px;
+  }
+  
+  /* Título estilizado */
+  .title {
+    font-size: 3rem; /* Tamaño más grande */
+    font-weight: 700; /* Negrita fuerte */
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Color vibrante */
+    text-shadow: 2px 2px 5px rgba(212, 39, 39, 0.178); /* Sombra para el texto */
+  }
+  
+  /* Descripción estilizada */
+  .description {
+    font-size: 1.25rem; /* Ligero aumento en el tamaño */
+    line-height: 1.8; /* Más espacio entre líneas */
+    text-align: justify; /* Justificación para un diseño más limpio */
+    color: #e0e0e0; /* Color claro */
+  }
+ 
+ 
+  /* Añadir separación entre párrafos */
+  .description br {
+    margin-bottom: 10px; /* Espacio entre líneas */
+  }
+  
+  /* Contenedor de los íconos */
+.iconsContainer {
+    display: flex; /* Para alinear íconos en fila o columna */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    gap: 30px; /* Espacio entre los íconos */
+    margin-top: 20px; /* Separación superior */
+  }
+  
+  /* Estilos para los íconos */
+  .iconsContainer svg, .iconsContainer i, .iconsContainer img {
+    width: 40px; /* Tamaño ancho */
+    height: 40px; /* Tamaño alto */    
+    transition: transform 0.3s ease; /* Efecto al pasar el cursor */
+  }
+  
+  /* Efecto hover para los íconos */
+  .iconsContainer svg:hover, .iconsContainer i:hover, .iconsContainer img:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño */
+  }
+  
+ 
