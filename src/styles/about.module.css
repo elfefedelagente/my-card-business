@@ -2,13 +2,6 @@
     text-align: center;
 }
 
-.sectionContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-  }
-  
   .sectionTitle {
     text-align: center;
     font-size: 2rem;
@@ -26,19 +19,47 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+    z-index: 2; /* Coloca la imagen encima de otros elementos */
+}
   
 
   .aboutContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
+    display: flex; /* Organiza los hijos en una fila */
+    justify-content: space-between; /* Espacio entre los bloques */
+    align-items: flex-start; /* Alinea los bloques al inicio verticalmente */
+    gap: 20px; /* Espacio entre los bloques */
+    margin-top: 20px; /* Separación del contenido superior */
+    position: relative; /* Agregar esta propiedad */
+    z-index: 1; /* Asegurarse de que este contenedor esté por encima de otros */
+}
+    
+  
+  .interestsContainer {
+    background-color: #f9f9f9; /* Fondo suave */
+    border: 1px solid #ddd; /* Borde claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 600px; /* Ancho máximo para el bloque */
+    margin: 20px 0 0 20px; /* Márgenes personalizados: sin auto */
+    align-items: flex-start;
+    gap: 20px;
+    order: 2;
   }
   
+
+  .mainContent {
+    flex: 1; /* Ocupa el espacio restante en el contenedor */
+    background-color: #f9f9f9; /* Fondo suave */
+    border: 1px solid #ddd; /* Borde claro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 600px; /* Ancho máximo */
+    order: 1;
+  }
+  
+
   .interestsList {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -56,6 +77,7 @@
     padding: 0.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
   }
   
   .interestsList li strong {
@@ -63,7 +85,8 @@
   }
   
   .aboutParagraph {
-    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
     line-height: 1.6;
     color: #555;
     text-align: justify;

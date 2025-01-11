@@ -1,0 +1,49 @@
+.skillsContainer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Permite que los elementos se envuelvan */
+    gap: 20px; /* Espacio entre las secciones */
+    align-items: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-bottom: 20px;
+    width: 45%;
+}
+
+.barContainer {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .skillsContainer {
+        flex-wrap: nowrap;
+    }
+}
+
+.progressBar {
+    height: 100%;
+    background-color: #76c7c0;
+    border-radius: 5px;
+}
+
+.level {
+    font-size: 14px;
+    color: #555;
+}
+
+
+.leftColumn,
+.rightColumn {
+    flex: 1; /* Cada columna ocupará el mismo ancho */
+    max-width: 48%; /* Asegúrate de que no ocupen más del 48% del ancho del contenedor */
+    box-sizing: border-box;
+}

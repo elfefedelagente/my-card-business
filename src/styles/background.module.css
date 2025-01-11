@@ -1,12 +1,9 @@
-.cpu {
-    background-image: url('/images/CPU.png'); 
-    background-size: cover;
-    background-position: center;
-    height: 100vh; 
-    width: 100vw;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
+
+#acerca-de-mi {
+  z-index: 2;
+  position: relative;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .text {
@@ -14,15 +11,6 @@
     font-size: 2rem;
     font-weight: bold;
 }
-
-.imagenAboutMe {
-    min-height: auto; 
-    display: block;
-    margin: 0 auto;
-    border: 1px solid #000;
-    border-radius: 50%;
-    aspect-ratio: 1 / 1;
-  }
 
   .container {
     background: linear-gradient(145deg, rgba(99, 94, 27, 0.85), rgba(40, 40, 40, 0.85));

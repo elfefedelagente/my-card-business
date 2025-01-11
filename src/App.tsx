@@ -1,18 +1,18 @@
 import AboutSection from "./components/About";
+import Skills from "./components/Skills"
+import ContactIcon from "./components/ContactIcon";
 import style from './styles/menuNav.module.css'
 import background from "./styles/background.module.css";
-import ContactIcon from "./components/ContactIcon";
-import aboutStyle from './styles/about.module.css';
+
 import { Link } from 'react-scroll';
 
 const App = () => {
   return (
-    <div>
-      
+    <div>  
+      <header>
         {/**
          * Menu de navegación
          */}
-      <header>
         <div >
             <nav className={style.nav}>
               <ul >
@@ -23,7 +23,7 @@ const App = () => {
                   <Link to="acerca-de-mi" smooth={true} duration={500}>Acerca de mí</Link>                  
                 </li>
                 <li>
-                  <Link to="educacion" smooth={true} duration={500}>Educación</Link>
+                  <Link to="habilidades" smooth={true} duration={500}>Habilidades</Link>
                   </li>
                 <li>
                   <Link to="mis-proyectos" smooth={true} duration={500}>Mis proyectos</Link>
@@ -35,8 +35,11 @@ const App = () => {
             </nav>
         </div>
       </header>      
-        <main>
-          <section id="inicio"  className={background.cpu} >
+        <main className={style.main}>
+          {/**
+           * SECCIÓN DE INICIO
+           */}
+          <section id="inicio" >
             <div className={background.container}>
               <h1 className={style.title}> Soy Cabaña Federico </h1>
               <p className={background.description}>
@@ -52,16 +55,21 @@ const App = () => {
               </div>
             </div>
           </section>
-                   
-          <section id="acerca-de-mi" >
-            <h2 className={aboutStyle.sectionContainer}>Acerca de mi</h2>    
-            <AboutSection/>
+          {/**
+           * SECCIÓN ACERCA DE MI
+           */}
+          <section id="acerca-de-mi">
+            <h2>Acerca de mí</h2>
+            <AboutSection />
           </section>
-
-          <section id="educacion">
-            <h2>Educación</h2>        
+            {/**
+           * SECCIÓN HABLIDADES
+           */}
+          <section id="habilidades">
+            <h1>Habilidades</h1>
+            <Skills/>
           </section>
-
+            
           <section id="mis-proyectos">
             <h2>Mis proyectos</h2>          
           </section>
