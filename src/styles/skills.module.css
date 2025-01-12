@@ -3,12 +3,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap; /* Permite que los elementos se envuelvan */
-    gap: 20px; /* Espacio entre las secciones */
+    gap: 100px; /* Espacio entre las secciones */
     align-items: flex-start;
     width: 100%;
     box-sizing: border-box;
 }
+.title {
+    display: flex;
+    justify-content: center;
 
+}
 .section {
     margin-bottom: 20px;
     width: 45%;

@@ -72,13 +72,11 @@ const Skills = () => {
         <div className={styles.rightColumn}>
             <h2>Frameworks y librerias</h2>
             <div className={styles.section}>
-            
                 <h3>React</h3>
                     <div className={styles.barContainer}>
                         <div className={styles.progressBar} style={{ width: "80%" }}></div>
                     </div>
             </div>
-
             <div className={styles.section}>
                 <h3>Django</h3>
                 <div className={styles.barContainer}>
@@ -105,6 +103,19 @@ const Skills = () => {
                     <div className={styles.progressBar} style={{ width: "87%" }}></div>
                 </div>
             </div>
+            <div className={styles.section}>
+                <h3>Node.js</h3>
+                <div className={styles.barContainer}>
+                    <div className={styles.progressBar} style={{ width: "77%" }}></div>
+                </div>
+            </div>
+            <div className={styles.section}>
+                <h3>Bootstrap</h3>
+                <div className={styles.barContainer}>
+                    <div className={styles.progressBar} style={{ width: "60%" }}></div>
+                </div>
+            </div>
+            
         </div>
     </div>
     );

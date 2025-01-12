@@ -1,0 +1,178 @@
+#inicio {
+  position: relative; /* Para contener elementos absolutos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  min-width: 100vw;
+  color: #ffffff; 
+  padding: 0;
+  text-align: center;
+  overflow: hidden; /* Evita que el fondo se desborde */
+  background: linear-gradient(135deg, #1e1e2f, #383850, #1e1e2f);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1e1e2f, #383850, #1e1e2f);
+  background-size: 300% 300%;
+  background-color: #1e1e2f;
+  z-index: -1; /* Detrás del contenido */
+  animation: gradientShift 10s ease-in-out infinite;  
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+.text {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;  
+}
+
+.container {
+  max-width: 1200px;
+  padding: 40px;
+  background: rgba(47, 46, 46, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(26, 27, 26, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: justify;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(100px); /* Similar a x: 100 */
+  }
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(90deg, #ffcc00, #ff7e5f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 10px rgba(186, 184, 184, 0.5);
+  margin-bottom: 10px;
+}
+
+  .description {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Escalable */
+    line-height: 1.8; /* Espaciado amplio */
+    color: #eaeaea; /* Texto gris claro */
+    text-align: justify;
+  }
+ 
+ 
+  /* Añadir separación entre párrafos */
+  .description br {
+    margin-bottom: 10px; /* Espacio entre líneas */
+  }
+  
+.iconsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite saltar de línea en dispositivos pequeños */
+    justify-content: center;
+    gap: 20px; /* Espaciado entre íconos */
+  }
+  
+  .iconsContainer svg, .iconsContainer i, .iconsContainer img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Íconos redondeados */    
+    padding: 10px; /* Espaciado interno */
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* Efecto hover para los íconos */
+  .iconsContainer svg:hover, .iconsContainer i:hover, .iconsContainer img:hover {
+    transform: scale(1.3); /* Aumenta el tamaño al pasar el cursor */
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.6); /* Sombra vibrante */
+  }
+  
+  /* IMPLEMENTACIÓN RESPONSIVA */
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px; /* Reduce el relleno */
+      border-radius: 15px;
+    }
+  
+    .description {
+      font-size: 1rem; /* Tamaño de fuente más pequeño */
+    }
+  
+    .iconsContainer svg, .iconsContainer i, .iconsContainer img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 2rem; /* Reduce el título */
+    }
+  
+    .description {
+      line-height: 1.5; /* Menos espaciado */
+    }
+  }
+ 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animación para el contenedor */
+  .container {
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  /* Animación para el título */
+  .title {
+    animation: fadeIn 2s ease-in-out 0.2s; /* Retrasa ligeramente */
+    animation-fill-mode: both; /* Asegura que el estado final se mantenga */
+  }
+  
+  /* Animación para la descripción */
+  .description {
+    animation: fadeIn 2s ease-in-out 0.5s;
+    animation-fill-mode: both;
+  }
+  
+  /* Animación para los íconos */
+  .iconsContainer svg,
+  .iconsContainer i,
+  .iconsContainer img {
+    opacity: 0; /* Comienza oculto */
+    animation: fadeIn 1s ease-in-out 1s; /* Aparece después de 1 segundo */
+    animation-fill-mode: forwards; /* Mantiene el estado final */
+  }
