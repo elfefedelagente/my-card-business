@@ -16,8 +16,8 @@ nav {
     padding: 10px 0;
     display: flex;
     justify-content: center; 
-    border-radius: 8px; 
-    z-index: 1000;
+    border-radius: 8px;     
+    z-index: 10;
   }
 
 nav ul {
@@ -48,19 +48,20 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    overflow: hidden;
+    width: 100%;    
+    padding-top: 100px;
   }
 
   section {
-    padding: 40px 20px;
+    padding: 100px 20px;
     min-height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
-    margin-bottom: 40px; /* Espacio entre secciones */
+    overflow: visible;
+    margin-bottom: 40px; 
+    z-index: 1;
   }
   
   section h2 {

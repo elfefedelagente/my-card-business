@@ -7,8 +7,7 @@
   min-width: 100vw;
   color: #ffffff; 
   padding: 0;
-  text-align: center;
-  overflow: hidden; /* Evita que el fondo se desborde */
+  text-align: center;  
   background: linear-gradient(135deg, #1e1e2f, #383850, #1e1e2f);
 }
 

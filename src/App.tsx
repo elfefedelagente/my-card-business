@@ -4,15 +4,13 @@ import ContactIcon from "./components/ContactIcon";
 import Portfolio from "./components/Portfolio"
 import NavBar from "./components/NavBar";
 import Contact from "./components/Contact"
-import style from './styles/menuNav.module.css'
 import styleInit from "./styles/init.module.css";
 import styleSkill from "./styles/skills.module.css"
 import { motion } from 'framer-motion'
 
 const BackgroundAnimation = () => {
   return (
-    <motion.div
-      //className={styleInit.background}
+    <motion.div      
       initial={{ backgroundPosition: "0% 50%" }}
       animate={{ backgroundPosition: "100% 50%" }}
       transition={{
@@ -26,13 +24,22 @@ const BackgroundAnimation = () => {
 
 
 const App = () => {
+  const sections = [
+    { id: "inicio", label: "Inicio" },
+    { id: "acerca-de-mi", label: "Acerca de mí" },
+    { id: "habilidades", label: "Habilidades" },
+    { id: "mis-proyectos", label: "Mis proyectos" },
+    { id: "contacto", label: "Contacto" }
+  ];
+
   return (
     <div>  
       <header>                                     
-          <NavBar/>  {/*  Menu de navegación */}
+          <NavBar sections={sections} />  {/*  Menu de navegación */}
       </header>      
-        <main className={styleInit.background}>                                    
-          <section id="inicio" className={styleInit.inicio} >  {/* SECCIÓN DE INICIO */}
+        <main className={styleInit.background}>                
+          {/* SECCIÓN DE INICIO */}                    
+          <section id="inicio" className={styleInit.inicio} >  
             <BackgroundAnimation />
             <div className={styleInit.container}>              
               <motion.h1 
