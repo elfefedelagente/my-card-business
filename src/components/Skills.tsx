@@ -1,19 +1,23 @@
 import styles from "../styles/skills.module.css"
 
+const iconBasePath = "/assets/";
+
 const Skills = () => {
+
     return(
     <div className={styles.skillsContainer}>
         <div className={styles.leftColumn}>
         <h2>Lenguajes de programación y IDEs</h2>
-        {/**
-         * Python 80%
-         */}
-        <div className={styles.section}>
+
+        {/* Python 80% */}
+        <div className={styles.skillItem}>
+            <img
+              src={`${iconBasePath}/python-programming-language-icon.svg`}
+              alt="Python icon"
+              className={styles.icon}
+            />
             <h3>Python</h3>
-            <div className={styles.barContainer}>
-                <div className={styles.progressBar} style={{ width: "80%" }}></div>
-            </div>
-        </div>
+          </div>
         {/**
          * CSS 40%
          */}

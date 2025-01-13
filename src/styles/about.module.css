@@ -1,3 +1,14 @@
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .title {
     text-align: center;
 }
@@ -6,12 +17,12 @@
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #333;
+    color: #ffff;
   }
   
   .imagenAboutMe {
-    width: 150px;
-    height: 150px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #4caf50;
@@ -19,75 +30,95 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    z-index: 2; /* Coloca la imagen encima de otros elementos */
-}
-  
-
-  .aboutContainer {
-    display: flex; /* Organiza los hijos en una fila */
-    justify-content: space-between; /* Espacio entre los bloques */
-    align-items: flex-start; /* Alinea los bloques al inicio verticalmente */
-    gap: 20px; /* Espacio entre los bloques */
-    margin-top: 20px; /* Separación del contenido superior */
-    position: relative; /* Agregar esta propiedad */
-    z-index: 1; /* Asegurarse de que este contenedor esté por encima de otros */
-}
     
+    
+}
   
-  .interestsContainer {
-    background-color: #f9f9f9; /* Fondo suave */
-    border: 1px solid #ddd; /* Borde claro */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    max-width: 600px; /* Ancho máximo para el bloque */
-    margin: 20px 0 0 20px; /* Márgenes personalizados: sin auto */
-    align-items: flex-start;
+
+.aboutContainer {
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start; 
     gap: 20px;
-    order: 2;
-  }
-  
+    margin-top: 50px;
+    position: relative;
+}
 
-  .mainContent {
-    flex: 1; /* Ocupa el espacio restante en el contenedor */
-    background-color: #f9f9f9; /* Fondo suave */
-    border: 1px solid #ddd; /* Borde claro */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    max-width: 600px; /* Ancho máximo */
-    order: 1;
-  }
+    
+.aboutContainer.visible {
+    opacity: 1; 
+    transform: translateY(0);
+}
   
+.interestsContainer {
+    flex: 1; 
+    max-width: 45%;
+    transform: translateX(-50px);
+    opacity: 0; 
+    transition: all 0.8s ease-out;
+}
 
-  .interestsList {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+.visible .interestsContainer {
+    transform: translateX(0); /* Aparece en su lugar */
+    opacity: 1; /* Totalmente visible */
+}
+  
+.mainContent {
+    padding: 0 20px;
+    transform: translateX(50px);
+    opacity: 0; 
+    transition: all 0.8s ease-out; 
+}
+
+.visible .mainContent {
+    transform: translateX(0); /* Aparece en su lugar */
+    opacity: 1; /* Totalmente visible */
+}
+  
+.interestsList {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0;
     text-align: left;
-  }
-  
-  .interestsList li {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espacio entre los items */
+}
+
+.interestsList li {
     display: flex;
     align-items: flex-start;
-    background-color: #f9f9f9;
-    padding: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 0.5rem; 
     font-family: 'Courier New', Courier, monospace;
-  }
+    padding: 0.5rem 0;
+}
+
+.interestsList li div {
+    color: #f8f8f8; 
+    font-size: 1.5rem; /* Tamaño del texto */
+    line-height: 2; /* Altura de línea para mejor legibilidad */
+}
   
   .interestsList li strong {
     margin-left: 0.5rem;
   }
   
-  .aboutParagraph {
+.aboutParagraph {
     font-family: 'Courier New', Courier, monospace;
-    font-size: large;
-    line-height: 1.6;
-    color: #555;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #ffffff; 
     text-align: justify;
-  }
+}
+
+.frameBox {
+    background-color: rgba(0, 0, 0, 0.8); 
+    border: 2px solid #4caf50; 
+    border-radius: 15px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px; /* Espaciado interno */
+    max-width: 600px; /* Ancho máximo */
+    animation: fadeSlideIn 0.8s ease-out; /* Aplicar la animación */
+    margin: 20px auto 20px 500px; 
+}
+

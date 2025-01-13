@@ -1,58 +1,85 @@
 import style from '../styles/about.module.css';
-import { FaUniversity, FaCode, FaHiking, FaMusic} from 'react-icons/fa';
+import { FaUniversity, FaCode, FaHiking, FaMusic, FaMapMarkedAlt } from 'react-icons/fa';
+import { useInView } from 'react-intersection-observer';
+import { motion } from "framer-motion";
 
 const About = () => {
+    const { ref, inView } = useInView({
+        threshold: 0.3, // Porcentaje visible para activar
+        triggerOnce: true, // Solo dispara una vez
+    });
+
     return (
-    <div className={style.aboutContainer}>
-        <div className={style.interestsContainer}>
-            <ul className={style.interestsList}>
-                <li>
-                <FaUniversity />
-                <div>
-                    <strong>Estudios: </strong>Analista programador universitario / Licenciatura en Sistemas
+        <div
+            ref={ref}
+            className={`${style.aboutContainer} ${inView ? style.visible : ''}`}
+        >
+            <div className={style.interestsContainer}>
+                <ul className={style.interestsList}>
+                    <li>
+                        <FaUniversity style={{ fontSize: "2rem" }}/>
+                        <div>
+                            <strong>Estudios:</strong> Universidad Nacional de la Patagonia San Juan Bosco
+                        </div>
+                    </li>
+                    <li>
+                        <FaCode style={{ fontSize: "2rem" }}/>
+                        <div>
+                            <strong>Intereses:</strong> Desarrollo web, sistemas embebidos y tecnología.
+                        </div>
+                    </li>
+                    <li>
+                        <FaHiking style={{ fontSize: "2rem" }}/>
+                        <div>
+                            <strong>Hobbies:</strong> Futbol, Peliculas, Videojuegos, Coding.
+                        </div>
+                    </li>
+                    <li>
+                        <FaMusic style={{ fontSize: "2rem" }}/>
+                        <div>
+                            <strong>Música Favorita:</strong> Rock, cumbia, instrumental y electrónica.
+                        </div>
+                    </li>
+                    <li>
+                        <FaMapMarkedAlt style={{ fontSize: "2rem" }}/>
+                        <div>
+                            <strong>Ubicación:</strong> Trelew, Chubut, Argentina
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <motion.div
+            className={style.frameBox}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+            <div className={style.mainContent}>
+                <p className={style.aboutParagraph}>
+                    Mi pasión por la tecnología se centra principalmente en los sistemas embebidos, solamente realice algunos proyectos como un semaforo cual lo lleve a una maqueta y un software para foto multa.
                     <br />
-                    <strong>Universidad Nacional de la Patagonia San Juan Bosco</strong>
-                </div>
-                </li>
-                <li>
-                <FaCode />
-                <div>
-                    <strong>Intereses:</strong> Desarrollo web, sistemas embebidos y tecnología.
-                </div>
-                </li>
-                <li>
-                <FaHiking />
-                <div>
-                    <strong>Hobbies:</strong> Senderismo, lectura y videojuegos.
-                </div>
-                </li>
-                <li>
-                <FaMusic />
-                <div>
-                    <strong>Música Favorita:</strong> Rock, instrumental y electrónica.
-                </div>
-                </li>
-            </ul>
+                    En la universidad estoy profundizando en el desarrollo de sistemas de información. Me interesa aprender
+                    sobre nuevas tecnologías y mantenerme actualizado en el campo. Además, me gusta tocar la guitarra, jugar al futbol,
+                    disfrutar de la lectura. En cuanto a mi rutina, prefiero hacer ejercicio
+                    de forma individual, lo que me ayuda a mantenerme enfocado y equilibrado con mi ser.
+                </p>
+            </div>
+        </motion.div>
         </div>
-        <div className={style.mainContent}>
-            <p className={style.aboutParagraph}>
-            Mi pasión por la tecnología se centra principalmente en los sistemas embebidos, 
-            aunque en la universidad estoy profundizando en el desarrollo de sistemas de información. Me interesa aprender sobre nuevas tecnologías y mantenerme actualizado en el campo. 
-            Además, me gusta tocar la guitarra, disfrutar de la lectura y estar rodeado de animales. En cuanto a mi rutina, prefiero hacer ejercicio de forma individual,
-            lo que me ayuda a mantenerme enfocado y equilibrado.
-            </p>        
-        </div>
-    </div>
     );
 };
 
 const AboutSection = () => {
     return (
-      <div>  
-        <img src="/my-card-business/images/perfil_git_page.jpg" alt="foto mía" className={style.imagenAboutMe} />
-        <About />
-      </div>
+        <div>
+            <img
+                src="/my-card-business/images/perfil_git_page.jpg"
+                alt="foto mía"
+                className={style.imagenAboutMe}
+            />
+            <About />
+        </div>
     );
-  };
+};
 
-export default AboutSection; 
+export default AboutSection;

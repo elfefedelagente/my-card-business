@@ -13,10 +13,6 @@
     justify-content: center;
 
 }
-.section {
-    margin-bottom: 20px;
-    width: 45%;
-}
 
 .barContainer {
     width: 100%;
@@ -51,3 +47,17 @@
     max-width: 48%; /* Asegúrate de que no ocupen más del 48% del ancho del contenedor */
     box-sizing: border-box;
 }
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  

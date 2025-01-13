@@ -2,28 +2,18 @@ import AboutSection from "./components/About";
 import Skills from "./components/Skills"
 import ContactIcon from "./components/ContactIcon";
 import Portfolio from "./components/Portfolio"
+//import BackgroundAnimation from "./components/BackgroundAnimation";
 import NavBar from "./components/NavBar";
 import Contact from "./components/Contact"
 import styleInit from "./styles/init.module.css";
+import stylesSections from "./styles/sections.module.css";
 import styleSkill from "./styles/skills.module.css"
-import { motion } from 'framer-motion'
+//import styleAbout from "./styles/about.module.css"
 
-const BackgroundAnimation = () => {
-  return (
-    <motion.div      
-      initial={{ backgroundPosition: "0% 50%" }}
-      animate={{ backgroundPosition: "100% 50%" }}
-      transition={{
-        duration: 10,
-        repeat: Infinity,
-        ease: "linear",
-      }}
-    />
-  );
-};
-
+//import { motion } from 'framer-motion'
 
 const App = () => {
+
   const sections = [
     { id: "inicio", label: "Inicio" },
     { id: "acerca-de-mi", label: "Acerca de mí" },
@@ -34,20 +24,18 @@ const App = () => {
 
   return (
     <div>  
-      <header>                                     
-          <NavBar sections={sections} />  {/*  Menu de navegación */}
+      {/*  Menu de navegación */}
+      <header >                                     
+        <NavBar sections={sections} /> 
       </header>      
-        <main className={styleInit.background}>                
-          {/* SECCIÓN DE INICIO */}                    
-          <section id="inicio" className={styleInit.inicio} >  
-            <BackgroundAnimation />
-            <div className={styleInit.container}>              
-              <motion.h1 
-              className={styleInit.title}
-              color="#fff"              
-              > 
-                Soy Cabaña Federico
-              </motion.h1>                             
+      <main  className={stylesSections.main}>                
+
+        {/* SECCIÓN DE INICIO */}                    
+        <section id="inicio" className={`${stylesSections.section} ${stylesSections.init} ${stylesSections.backgroundAnimated}`}>  
+            <div className={styleInit.container}>     
+
+              <h1 className={styleInit.title}> Soy Cabaña Federico </h1>                             
+              
               <p className={styleInit.description}>
                 Me gusta la tecnología y como crece el día a día, hasta impresiona saber como puede cambiar la vida de las personas haciendo todo mas facil y a la vez más dificil para otras.
                 <br />
@@ -60,32 +48,31 @@ const App = () => {
                 <ContactIcon/>
               </div>
             </div>
-          </section>
-          {/**
-           * SECCIÓN ACERCA DE MI
-           */}
-          <section id="acerca-de-mi">
-            <h2>Acerca de mí</h2>
-            <AboutSection />
-          </section>
-            {/**
-           * SECCIÓN HABLIDADES
-           */}
-          <section id="habilidades">
-            <h1 className={styleSkill.title}>Habilidades</h1>
-            <Skills/>
-          </section>
-            
-          <section id="mis-proyectos">
-            <h2>Mis proyectos</h2>         
-            <Portfolio/> 
-          </section>
+        </section>
 
-          <section id="contacto">
-            <h2>Contacto</h2>          
-            <Contact/>
-          </section>
-        </main>      
+        {/* SECCIÓN ACERCA DE MI */}
+        <section id="acerca-de-mi" className={`${stylesSections.section} ${stylesSections.aboutMe}`}>
+          <AboutSection />
+        </section>
+        
+        {/* SECCIÓN HABLIDADES */}
+        <section id="habilidades" className={`${stylesSections.section} ${stylesSections.skills}`}>
+          <h1 className={styleSkill.title}>Habilidades</h1>
+          <Skills/>
+        </section>
+
+        {/* SECCIÓN MIS PROYECTOS */}
+        <section id="mis-proyectos" className={`${stylesSections.section} ${stylesSections.myProyect}`}>
+          <h2>Mis proyectos</h2>         
+          <Portfolio/> 
+        </section>
+         
+         {/* SECCIÓN CONTACTO */}
+        <section id="contacto" className={`${stylesSections.section} ${stylesSections.contact}`}>
+          <h2>Contacto</h2>          
+          <Contact/>
+        </section>
+      </main>      
       <footer>
         <p>© 2025 Business Card App</p>
       </footer>
