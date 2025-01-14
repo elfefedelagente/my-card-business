@@ -1,10 +1,8 @@
-/* Estilo base para todas las secciones */
 .section {
     margin-top:0; 
     padding: 20px 0;
   }
   
-  /* Si es necesario un espaciado adicional para secciones específicas */
   #init {
     margin-bottom: 80px;
   }
@@ -51,6 +49,6 @@
       #c2e9fb
     );
     background-size: 300% 300%;
-    z-index: -1;
+    z-index: 0;
     animation: gradientShift 15s ease infinite;
   }

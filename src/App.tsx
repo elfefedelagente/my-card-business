@@ -2,15 +2,10 @@ import AboutSection from "./components/About";
 import Skills from "./components/Skills"
 import ContactIcon from "./components/ContactIcon";
 import Portfolio from "./components/Portfolio"
-//import BackgroundAnimation from "./components/BackgroundAnimation";
 import NavBar from "./components/NavBar";
 import Contact from "./components/Contact"
 import styleInit from "./styles/init.module.css";
 import stylesSections from "./styles/sections.module.css";
-import styleSkill from "./styles/skills.module.css"
-//import styleAbout from "./styles/about.module.css"
-
-//import { motion } from 'framer-motion'
 
 const App = () => {
 
@@ -57,24 +52,21 @@ const App = () => {
         
         {/* SECCIÓN HABLIDADES */}
         <section id="habilidades" className={`${stylesSections.section} ${stylesSections.skills}`}>
-          <h1 className={styleSkill.title}>Habilidades</h1>
           <Skills/>
         </section>
 
         {/* SECCIÓN MIS PROYECTOS */}
-        <section id="mis-proyectos" className={`${stylesSections.section} ${stylesSections.myProyect}`}>
-          <h2>Mis proyectos</h2>         
+        <section id="mis-proyectos" className={`${stylesSections.section} ${stylesSections.myProyect}`}>  
           <Portfolio/> 
         </section>
          
          {/* SECCIÓN CONTACTO */}
-        <section id="contacto" className={`${stylesSections.section} ${stylesSections.contact}`}>
-          <h2>Contacto</h2>          
+        <section id="contacto" className={`${stylesSections.section} ${stylesSections.contact}`}>        
           <Contact/>
         </section>
       </main>      
       <footer>
-        <p>© 2025 Business Card App</p>
+        
       </footer>
     </div>
   );

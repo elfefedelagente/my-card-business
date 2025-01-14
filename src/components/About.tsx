@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const About = () => {
     const { ref, inView } = useInView({
-        threshold: 0.3, // Porcentaje visible para activar
-        triggerOnce: true, // Solo dispara una vez
+        threshold: 0.3, 
+        triggerOnce: true,
     });
 
     return (

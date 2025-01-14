@@ -37,7 +37,7 @@
       transform: translateX(0);
   }
   to {
-      transform: translateX(100px); /* Similar a x: 100 */
+      transform: translateX(100px); 
   }
 }
 
@@ -49,52 +49,82 @@
   -webkit-text-fill-color: transparent;
   text-shadow: 0 4px 10px rgba(186, 184, 184, 0.5);
   margin-bottom: 10px;
+  justify-content: center;
+  display: flex;
+
 }
 
   .description {
-    font-size: clamp(1rem, 2vw, 1.5rem); /* Escalable */
-    line-height: 1.8; /* Espaciado amplio */
-    color: #eaeaea; /* Texto gris claro */
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    line-height: 1.8;
+    color: #eaeaea;
     text-align: justify;
   }
  
  
-  /* Añadir separación entre párrafos */
+  /* Separación entre párrafos */
   .description br {
-    margin-bottom: 10px; /* Espacio entre líneas */
+    margin-bottom: 10px; 
   }
   
+/* Contenedor de los iconos */
 .iconsContainer {
-    display: flex;
-    flex-wrap: wrap; /* Permite saltar de línea en dispositivos pequeños */
-    justify-content: center;
-    gap: 20px; /* Espaciado entre íconos */
-  }
-  
-  .iconsContainer svg, .iconsContainer i, .iconsContainer img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%; /* Íconos redondeados */    
-    padding: 10px; /* Espaciado interno */
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  /* Efecto hover para los íconos */
-  .iconsContainer svg:hover, .iconsContainer i:hover, .iconsContainer img:hover {
-    transform: scale(1.3); /* Aumenta el tamaño al pasar el cursor */
-    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.6); /* Sombra vibrante */
-  }
-  
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Estilos generales para los íconos */
+.iconsContainer svg, .iconsContainer i, .iconsContainer img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  position: relative;
+  z-index: 1;  
+}
+
+/* Efecto hover */
+.iconsContainer svg:hover, .iconsContainer i:hover, .iconsContainer img:hover {
+  transform: scale(1.3);  
+}
+
+.iconsContainer a svg {
+  cursor: inherit; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iconsContainer a svg:hover {
+  transform: scale(1.3); 
+}
+
+.iconsContainer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+
+.iconsContainer a:hover {
+  transform: scale(1.3);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 50%; 
+}
+
   /* IMPLEMENTACIÓN RESPONSIVA */
 
   @media (max-width: 768px) {
     .container {
-      padding: 20px; /* Reduce el relleno */
+      padding: 20px; 
       border-radius: 15px;
     }
   
     .description {
-      font-size: 1rem; /* Tamaño de fuente más pequeño */
+      font-size: 1rem;
     }
   
     .iconsContainer svg, .iconsContainer i, .iconsContainer img {
@@ -105,11 +135,11 @@
   
   @media (max-width: 480px) {
     .title {
-      font-size: 2rem; /* Reduce el título */
+      font-size: 2rem;
     }
   
     .description {
-      line-height: 1.5; /* Menos espaciado */
+      line-height: 1.5;
     }
   }
  
@@ -131,8 +161,8 @@
   
   /* Animación para el título */
   .title {
-    animation: fadeIn 2s ease-in-out 0.2s; /* Retrasa ligeramente */
-    animation-fill-mode: both; /* Asegura que el estado final se mantenga */
+    animation: fadeIn 2s ease-in-out 0.2s;
+    animation-fill-mode: both; 
   }
   
   /* Animación para la descripción */
@@ -145,7 +175,7 @@
   .iconsContainer svg,
   .iconsContainer i,
   .iconsContainer img {
-    opacity: 0; /* Comienza oculto */
-    animation: fadeIn 1s ease-in-out 1s; /* Aparece después de 1 segundo */
-    animation-fill-mode: forwards; /* Mantiene el estado final */
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1s;
+    animation-fill-mode: forwards; 
   }

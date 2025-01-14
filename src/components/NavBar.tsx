@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Link } from "react-scroll"; // Asumiendo que usas react-scroll
-import style from "../styles/menuNav.module.css"; // Cambia esto según tu estructura
+import { Link } from "react-scroll"; 
+import style from "../styles/menuNav.module.css";
 
 interface NavBarProps {
     sections: { id: string, label: string }[];

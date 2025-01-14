@@ -1,0 +1,95 @@
+.portfolioContainer {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .imageGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .imageWrapper {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image {
+    width: 200px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .imageWrapper:hover {
+    transform: scale(1.2);
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .imageWrapper:hover .overlay {
+    opacity: 1;
+  }
+  
+  .viewButton {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .viewButton:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .modalContent img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .modalContent p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  

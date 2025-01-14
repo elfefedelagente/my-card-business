@@ -11,6 +11,11 @@ export default defineConfig({
 */
 export default defineConfig(({ command }) => ({
   plugins: [react()],
+  css: {
+    modules: {
+      localsConvention: 'camelCase', // Para usar camelCase en las clases CSS
+    },
+  },
   base: command === 'build' 
     ? "https://elfefedelagente.github.io/my-card-business" 
     : "/", // Usa "/" para el entorno de desarrollo
