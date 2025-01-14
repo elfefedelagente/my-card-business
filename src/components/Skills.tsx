@@ -107,20 +107,20 @@ const Skills = () => {
                     <div className={styles.progressBar} style={{ width: "47%" }}></div>
                 </div>
             </div>
-            {/* Docker %76 */}
+            {/* Docker %66 */}
             <div className={styles.section}>
                 <h3>Docker</h3>
                 <img src={dockerIcon} alt="Docker Icon" className={styles.icon} />
                 <div className={styles.barContainer}>
-                    <div className={styles.progressBar} style={{ width: "76%" }}></div>
+                    <div className={styles.progressBar} style={{ width: "66%" }}></div>
                 </div>
             </div>
-            {/* Next.js %80 */}
+            {/* Next.js %70 */}
             <div className={styles.section}>
                 <h3>Next.js</h3>
                 <img src={nextJsIcon} alt="Next.js Icon" className={styles.icon} />
                 <div className={styles.barContainer}>
-                    <div className={styles.progressBar} style={{ width: "80%" }}></div>
+                    <div className={styles.progressBar} style={{ width: "70%" }}></div>
                 </div>
             </div>
             {/* FastApi %87 */}
