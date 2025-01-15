@@ -21,7 +21,7 @@ const Skills = () => {
     <div className={styles.skillsContainer}>
         <div className={styles.leftColumn}>
         {/* LENGUAJES DE PROGRAMACION Y IDEs */}
-        <h2>Lenguajes de programación y IDEs</h2>
+        <h2>Lenguajes de programación e IDEs</h2>
         {/* Python %80 */}
         <div className={styles.section}>
             <h3>Python</h3>

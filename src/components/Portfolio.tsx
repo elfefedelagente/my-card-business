@@ -9,13 +9,13 @@ type ImageType = {
 };
 
 const images: ImageType[] = [
-  { src: "/images/InicioSesión.png", alt: "Inicio de sesión", desc: "Pantalla de inicio de sesión" },
-  { src: "/images/CreaciónUsuario.png", alt: "Creación de usuario", desc: "Pantalla de creación de usuario" },
-  { src: "/images/VisualizaciónUsuarios.png", alt: "Vista de usuarios", desc: "Visualización de usuarios" },
-  { src: "/images/TiposDeDatos.png", alt: "Datos soportados", desc: "Tipos de datos soportados" },
-  { src: "/images/NotificaciónTelegram.png", alt: "Vinculación con telegram", desc: "Notificación vía Telegram" },
-  { src: "/images/CargaDeDatos.png", alt: "Carga de tipos de datos aceptados", desc: "Carga de datos aceptados" },
-  { src: "/images/ManipulaciónNodos.png", alt: "Panel de nodos", desc: "Manipulación de nodos en el sistema" },
+  { src: "/my-card-business/images/InicioSesión.png", alt: "Inicio de sesión", desc: "Pantalla de inicio de sesión" },
+  { src: "/my-card-business/images/CreaciónUsuario.png", alt: "Creación de usuario", desc: "Pantalla de creación de usuario" },
+  { src: "/my-card-business/images/VisualizaciónUsuarios.png", alt: "Vista de usuarios", desc: "Visualización de usuarios" },
+  { src: "/my-card-business/images/TiposDeDatos.png", alt: "Datos soportados", desc: "Tipos de datos soportados" },
+  { src: "/my-card-business/images/NotificaciónTelegram.png", alt: "Vinculación con telegram", desc: "Notificación vía Telegram" },
+  { src: "/my-card-business/images/CargaDeDatos.png", alt: "Carga de tipos de datos aceptados", desc: "Carga de datos aceptados" },
+  { src: "/my-card-business/images/ManipulaciónNodos.png", alt: "Panel de nodos", desc: "Manipulación de nodos en el sistema" },
 ];
 
 const Portfolio = () => {
@@ -25,7 +25,7 @@ const Portfolio = () => {
 
   return (
     <div className={styles.portfolioContainer}>
-      <h1>Red de monitoreo ambiental Rio Chubut</h1>
+      <h1 className={styles.title}><strong>Red de monitoreo ambiental Rio Chubut</strong></h1>
       <div className={styles.imageGrid}>
         {images.map((image, index) => (
           <motion.div

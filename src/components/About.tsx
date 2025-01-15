@@ -56,10 +56,14 @@ const About = () => {
         >
             <div className={style.mainContent}>
                 <p className={style.aboutParagraph}>
-                    Mi pasión por la tecnología se centra principalmente en los sistemas embebidos, solamente realice algunos proyectos como un semaforo cual lo lleve a una maqueta y un software para foto multa.
+                    Mi pasión por la tecnología se centra principalmente en los sistemas embebidos, 
+                    solamente realice algunos proyectos como un semaforo hecho en arduino cual lo lleve a una maqueta
+                    y software hecho con microchip technology inc para implementar en la materia de Arquitectura de computadoras un prototipo de foto multa.
                     <br />
-                    En la universidad estoy profundizando en el desarrollo de sistemas de información. Me interesa aprender
-                    sobre nuevas tecnologías y mantenerme actualizado en el campo. Además, me gusta tocar la guitarra, jugar al futbol,
+                    En la universidad estoy profundizando en el desarrollo de sistemas de información especialmente alojados en servidores web. Me interesa aprender
+                    sobre nuevas tecnologías y mantenerme actualizado en el campo.
+                    <br />
+                    Además, me gusta tocar la guitarra, jugar al futbol,
                     disfrutar de la lectura. En cuanto a mi rutina, prefiero hacer ejercicio
                     de forma individual, lo que me ayuda a mantenerme enfocado y equilibrado con mi ser.
                 </p>

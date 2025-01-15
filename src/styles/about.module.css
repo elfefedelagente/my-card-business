@@ -9,18 +9,7 @@
     }
 }
 
-.title {
-    text-align: center;
-}
-
-  .sectionTitle {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #ffff;
-  }
-  
-  .imagenAboutMe {
+.imagenAboutMe {
     width: 350px;
     height: 350px;
     border-radius: 50%;
@@ -30,16 +19,14 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-    
+    margin-top: 100px;
 }
   
-
 .aboutContainer {
     display: flex; 
     justify-content: space-between;
     align-items: flex-start; 
-    gap: 20px;
+    gap: 10px;
     margin-top: 50px;
     position: relative;
 }
@@ -105,7 +92,7 @@
   
 .aboutParagraph {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.8;
     color: #ffffff; 
     text-align: justify;
@@ -116,8 +103,9 @@
     border: 2px solid #4caf50; 
     border-radius: 15px; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 20px; 
+    padding: 5px; 
     max-width: 600px;
     animation: fadeSlideIn 0.8s ease-out; 
-    margin: 20px auto 20px 500px; 
+    margin: 20px auto 20px 400px;
+    margin-top: -80px; 
 }

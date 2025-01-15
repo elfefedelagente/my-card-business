@@ -1,25 +1,31 @@
 .portfolioContainer {
     text-align: center;
     padding: 20px;
+    margin-top: -50%;
   }
   
+  .title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+
   .imageGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-items: center;
-    align-items: center;
+    gap: 10px;
     padding: 20px;
+    grid-auto-rows: 10px;
   }
   
   .imageWrapper {
     position: relative;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    break-inside: avoid; /* Evita romper elementos */
   }
   
   .image {
-    width: 200px; 
+    width: 100%; 
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
