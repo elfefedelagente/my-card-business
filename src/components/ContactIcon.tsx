@@ -26,4 +26,3 @@ const ContactIcon: React.FC = () => {
     );
 };
 export default ContactIcon;
- 

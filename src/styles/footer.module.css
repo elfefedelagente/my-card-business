@@ -1,0 +1,27 @@
+.footer {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); 
+    color: #ffffff; 
+    padding: 1.5rem 2rem; 
+    text-align: center; 
+    font-size: 0.9rem; 
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.3); 
+    border-top: 2px solid #ffffff22; 
+}
+
+.footer p {
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.footer a {
+    color: #81c784; /* Color de enlace */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+.footer a:hover {
+    color: #aed581; /* Cambiar color al pasar el cursor */
+}

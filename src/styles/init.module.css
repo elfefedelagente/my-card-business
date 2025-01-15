@@ -11,12 +11,6 @@
   }
 }
 
-.text {
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;  
-}
-
 .container {
   max-width: 1200px;
   padding: 40px;
@@ -29,7 +23,8 @@
   gap: 20px;
   text-align: justify;
   position: relative;
-  z-index: 1;
+  z-index: 1;  
+  margin-top: -10px;
 }
 
 @keyframes slideIn {
@@ -54,12 +49,12 @@
 
 }
 
-  .description {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    line-height: 1.8;
-    color: #eaeaea;
-    text-align: justify;
-  }
+.description {
+  font-size: clamp(1rem, 1vw, 1.5rem);
+  line-height: 1.8;
+  color: #eaeaea;
+  text-align: justify;
+}
  
  
   /* Separación entre párrafos */

@@ -72,8 +72,11 @@ const App = () => {
           <Contact/>
         </section>
       </main>      
-      <footer>
-        
+      <footer >        
+        {/**
+         
+        <p>&copy; 2025 Cabaña Federico. Todos los derechos reservados.</p>
+         */}
       </footer>
     </div>
   );

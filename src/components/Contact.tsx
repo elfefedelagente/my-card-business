@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import emailJs from 'emailjs-com';
+import { toast, ToastContainer } from 'react-toastify';
 import styles from '../styles/contact.module.css';
 
 const Contact = () => {
@@ -12,6 +13,7 @@ const Contact = () => {
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
+        console.log(`Campo cambiado: ${name}, Valor: ${value}`);
         setFormData({
             ...formData,
             [name]: value,
@@ -22,38 +24,57 @@ const Contact = () => {
         e.preventDefault();
         const { name, email, message } = formData;
 
-        if (!name.trim() || !email.trim() || !message.trim()) {
-            alert('Por favor, completa todos los campos.');
+        if (!name.trim()) {
+            toast.error('Por favor, ingresa tu nombre.');
+            return;
+        }
+        if (!email.trim()) {
+            toast.error('Por favor, ingresa tu correo electrónico.');
+            return;
+        }
+        if (!message.trim()) {
+            toast.error('Por favor, ingresa un mensaje.');
             return;
         }
 
+
         emailJs
             .send(
-                import.meta.env.VITE_EMAILJS_SERVICE_ID, // Tu Service ID
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Tu Template ID
+                import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 {
-                    to_name: 'Federico', // Destinatario fijo
-                    from_name: name, // Nombre del remitente
-                    email, // Email del remitente
-                    mensaje: message, // Mensaje del remitente
+                    to_name: 'Federico',
+                    from_name: name, 
+                    email:email, 
+                    mensaje: message,
                 },
-                import.meta.env.VITE_EMAILJS_USER_ID // Tu User ID
+                import.meta.env.VITE_EMAILJS_USER_ID 
             )
             .then(
                 () => {
-                    alert('Mensaje enviado con éxito');
-                    setFormData({ name: '', email: '', message: '' }); // Resetea el formulario
+                    toast.success('Mensaje enviado con éxito');
+                    setFormData({ name: '', email: '', message: '' });
                 },
-                (err) => alert('Error al enviar el mensaje: ' + err.text)
+                (err) =>   toast.error('Error al enviar el mensaje: ' + err.text)
             );
     };
 
+    
     return (
+        <>
+        <ToastContainer 
+                position="top-center" 
+                autoClose={5000} 
+                hideProgressBar={true} 
+                closeOnClick={true}
+                theme="colored"
+                toastClassName={styles.toast}
+            />
         <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className={styles.container}
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className={styles.container}
         >
             <motion.h1
                 className={styles.title}
@@ -63,7 +84,8 @@ const Contact = () => {
             >
                 Contáctame
             </motion.h1>
-            <form onSubmit={handleSubmit} className={styles.form}>
+           
+            <form onSubmit={handleSubmit} className={styles.form} noValidate>
                 <motion.div
                     className={styles.formGroup}
                     initial={{ opacity: 0, x: -50 }}
@@ -80,7 +102,6 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Tu nombre"
-                        required
                         className={styles.input}
                     />
                 </motion.div>
@@ -100,7 +121,6 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         placeholder="Tu correo electrónico"
-                        required
                         className={styles.input}
                     />
                 </motion.div>
@@ -119,7 +139,6 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         placeholder="Escribe tu mensaje aquí"
-                        required
                         className={styles.textarea}
                     />
                 </motion.div>
@@ -131,7 +150,7 @@ const Contact = () => {
                 </motion.button>
             </form>
         </motion.div>
+    </>
     );
 };
-
 export default Contact;

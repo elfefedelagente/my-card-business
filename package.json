@@ -21,6 +21,7 @@
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.14.1",
     "react-scroll": "^1.9.0",
+    "react-toastify": "^11.0.2",
     "sass": "^1.83.1"
   },
   "devDependencies": {

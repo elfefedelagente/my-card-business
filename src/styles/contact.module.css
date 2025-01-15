@@ -1,4 +1,7 @@
 .container {
+    position: absolute; 
+    transform: translate(-50%, -50%); 
+    overflow: visible;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,11 +10,10 @@
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 700px; 
-    max-width: 900px;
-    margin: auto; 
-    height: auto; 
-    min-height: 500px;
+    width: 500px; 
+    margin: 0;
+    min-width: auto;
+    min-height: auto;
 }
 
 .title {
@@ -96,4 +98,22 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.toast-success {
+    background-color: #4caf50 !important;
+}
+
+.toast-error {
+    background-color: #f44336 !important;
+}
+
+.Toastify__toast-container {
+    position: fixed; 
+    z-index: 1050;
+    pointer-events: auto;
+}
+
+:target {
+    scroll-margin-top: 100px; 
 }

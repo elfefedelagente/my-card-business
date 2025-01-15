@@ -10,8 +10,8 @@
 }
 
 .imagenAboutMe {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #4caf50;
@@ -27,11 +27,10 @@
     justify-content: space-between;
     align-items: flex-start; 
     gap: 10px;
-    margin-top: 50px;
+    margin-top: 5px;
     position: relative;
 }
 
-    
 .aboutContainer.visible {
     opacity: 1; 
     transform: translateY(0);
@@ -49,7 +48,7 @@
     transform: translateX(0);
     opacity: 1;
 }
-  
+
 .mainContent {
     padding: 0 20px;
     transform: translateX(50px);
@@ -82,7 +81,7 @@
 
 .interestsList li div {
     color: #f8f8f8; 
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     line-height: 2; 
 }
   
@@ -92,7 +91,7 @@
   
 .aboutParagraph {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     line-height: 1.8;
     color: #ffffff; 
     text-align: justify;
