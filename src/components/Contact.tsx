@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailJs from 'emailjs-com';
 import styles from '../styles/contact.module.css';
 
 const Contact = () => {
@@ -19,7 +20,32 @@ const Contact = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        alert(`Gracias, ${formData.name}. Ya nos contactaremos "${formData.message}"`);
+        const { name, email, message } = formData;
+
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            alert('Por favor, completa todos los campos.');
+            return;
+        }
+
+        emailJs
+            .send(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID, // Tu Service ID
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Tu Template ID
+                {
+                    to_name: 'Federico', // Destinatario fijo
+                    from_name: name, // Nombre del remitente
+                    email, // Email del remitente
+                    mensaje: message, // Mensaje del remitente
+                },
+                import.meta.env.VITE_EMAILJS_USER_ID // Tu User ID
+            )
+            .then(
+                () => {
+                    alert('Mensaje enviado con éxito');
+                    setFormData({ name: '', email: '', message: '' }); // Resetea el formulario
+                },
+                (err) => alert('Error al enviar el mensaje: ' + err.text)
+            );
     };
 
     return (
@@ -44,7 +70,9 @@ const Contact = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    <label htmlFor="name" className={styles.label}>Nombre:</label>
+                    <label htmlFor="name" className={styles.label}>
+                        Nombre:
+                    </label>
                     <input
                         type="text"
                         id="name"
@@ -62,7 +90,9 @@ const Contact = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    <label htmlFor="email" className={styles.label}>Correo Electrónico:</label>
+                    <label htmlFor="email" className={styles.label}>
+                        Correo Electrónico:
+                    </label>
                     <input
                         type="email"
                         id="email"
@@ -80,7 +110,9 @@ const Contact = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                    <label htmlFor="message" className={styles.label}>Mensaje:</label>
+                    <label htmlFor="message" className={styles.label}>
+                        Mensaje:
+                    </label>
                     <textarea
                         id="message"
                         name="message"
@@ -94,9 +126,6 @@ const Contact = () => {
                 <motion.button
                     type="submit"
                     className={styles.button}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={{ duration: 0.3 }}
                 >
                     Enviar
                 </motion.button>
