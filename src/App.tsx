@@ -42,6 +42,13 @@ const App = () => {
               <div className={styleInit.iconsContainer}>
                 <ContactIcon/>
               </div>
+              <a
+                href="/public/CV-Cabaña-Federico.pdf"
+                className={styleInit.downloadButton}
+                download="Cabaña_Federico_CV.pdf"
+               >
+              Descargar CV
+              </a>
             </div>
         </section>
 

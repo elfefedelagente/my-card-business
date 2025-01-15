@@ -179,3 +179,29 @@
     animation: fadeIn 1s ease-in-out 1s;
     animation-fill-mode: forwards; 
   }
+
+  .downloadButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+  }
+  
+  .downloadButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  
+  .downloadButton:active {
+    background-color: #003f7f;
+  }
+  
