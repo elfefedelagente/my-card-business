@@ -75,7 +75,7 @@ const About = () => {
 
 const AboutSection = () => {
     return (
-        <div>
+        <div className={style.aboutContainer}>
             <img
                 src="/my-card-business/images/perfil_git_page.jpg"
                 alt="foto mía"
@@ -85,5 +85,4 @@ const AboutSection = () => {
         </div>
     );
 };
-
 export default AboutSection;

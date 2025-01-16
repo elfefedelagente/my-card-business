@@ -6,6 +6,10 @@ import NavBar from "./components/NavBar";
 import Contact from "./components/Contact"
 import styleInit from "./styles/init.module.css";
 import stylesSections from "./styles/sections.module.css";
+import styleSkills from "./styles/skills.module.css";
+import styleAbout from "./styles/about.module.css"
+import styleContact from "./styles/contact.module.css";
+import stylePortfolio from "./styles/portfolio.module.css";
 
 const App = () => {
 
@@ -53,22 +57,22 @@ const App = () => {
         </section>
 
         {/* SECCIÓN ACERCA DE MI */}
-        <section id="acerca-de-mi" className={`${stylesSections.section} ${stylesSections.aboutMe}`}>
+        <section id="acerca-de-mi" className={`${stylesSections.section} ${stylesSections.aboutMe} ${styleAbout.aboutBackground}`}>
           <AboutSection />
         </section>
         
         {/* SECCIÓN HABLIDADES */}
-        <section id="habilidades" className={`${stylesSections.section} ${stylesSections.skills}`}>
-          <Skills/>
+        <section id="habilidades" className={`${stylesSections.section} ${stylesSections.skills} ${styleSkills.skillsBackground}`}>
+            <Skills/>
         </section>
 
         {/* SECCIÓN MIS PROYECTOS */}
-        <section id="mis-proyectos" className={`${stylesSections.section} ${stylesSections.myProyect}`}>  
+        <section id="mis-proyectos" className={`${stylesSections.section} ${stylesSections.myProyect} ${stylePortfolio.portfolioBackground}`}>  
           <Portfolio/> 
         </section>
          
          {/* SECCIÓN CONTACTO */}
-        <section id="contacto" className={`${stylesSections.section} ${stylesSections.contact}`}>        
+        <section id="contacto" className={`${stylesSections.section} ${stylesSections.contact} ${styleContact.contactBackground}`}>        
           <Contact/>
         </section>
       </main>      

@@ -1,3 +1,17 @@
+.portfolioBackground{
+  position: relative;
+  width: 100%;
+  padding: 50px 20px;
+  background: linear-gradient(
+          rgba(0, 0, 0, 0.5),
+          rgba(0, 0, 0, 0.5)
+      ),
+      url('/public/images/BackgroundPortfolio.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
 .portfolioContainer {
     text-align: center;
     padding: 20px;
