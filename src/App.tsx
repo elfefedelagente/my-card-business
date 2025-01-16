@@ -43,7 +43,7 @@ const App = () => {
                 <ContactIcon/>
               </div>
               <a
-                href="/CV-Cabaña-Federico.pdf"
+                href="https://elfefedelagente.github.io/my-card-business/CV-Cabaña-Federico.pdf"
                 className={styleInit.downloadButton}
                 download="Cabaña_Federico_CV.pdf"
                >
