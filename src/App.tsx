@@ -43,7 +43,7 @@ const App = () => {
                 <ContactIcon/>
               </div>
               <a
-                href="/public/CV-Cabaña-Federico.pdf"
+                href="/CV-Cabaña-Federico.pdf"
                 className={styleInit.downloadButton}
                 download="Cabaña_Federico_CV.pdf"
                >

@@ -21,13 +21,17 @@ const Contact = () => {
     };
 
     const validateForm = (data: typeof formData): boolean => {
-        
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!data.name.trim()) {
             toast.error('Por favor, ingresa tu nombre.');
             return false;
         }
         if (!data.email.trim()) {
             toast.error('Por favor, ingresa tu correo electrónico.');
+            return false;
+        }
+        if (!emailRegex.test(data.email)) {
+            toast.error('Por favor, ingresa un correo electrónico válido.');
             return false;
         }
         if (!data.message.trim()) {
