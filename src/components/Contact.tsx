@@ -1,7 +1,8 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import emailJs from 'emailjs-com';
 import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import styles from '../styles/contact.module.css';
 
 const Contact = () => {
@@ -10,7 +11,6 @@ const Contact = () => {
         email: '',
         message: '',
     });
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         console.log(`Campo cambiado: ${name}, Valor: ${value}`);
@@ -20,23 +20,29 @@ const Contact = () => {
         });
     };
 
+    const validateForm = (data: typeof formData): boolean => {
+        
+        if (!data.name.trim()) {
+            toast.error('Por favor, ingresa tu nombre.');
+            return false;
+        }
+        if (!data.email.trim()) {
+            toast.error('Por favor, ingresa tu correo electrónico.');
+            return false;
+        }
+        if (!data.message.trim()) {
+            toast.error('Por favor, ingresa un mensaje.');
+            return false;
+        }
+        return true;
+    };
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
+        
         const { name, email, message } = formData;
 
-        if (!name.trim()) {
-            toast.error('Por favor, ingresa tu nombre.');
-            return;
-        }
-        if (!email.trim()) {
-            toast.error('Por favor, ingresa tu correo electrónico.');
-            return;
-        }
-        if (!message.trim()) {
-            toast.error('Por favor, ingresa un mensaje.');
-            return;
-        }
-
+        if (!validateForm(formData)) return;
 
         emailJs
             .send(
@@ -45,7 +51,7 @@ const Contact = () => {
                 {
                     to_name: 'Federico',
                     from_name: name, 
-                    email:email, 
+                    email, 
                     mensaje: message,
                 },
                 import.meta.env.VITE_EMAILJS_USER_ID 
@@ -56,25 +62,26 @@ const Contact = () => {
                     setFormData({ name: '', email: '', message: '' });
                 },
                 (err) =>   toast.error('Error al enviar el mensaje: ' + err.text)
-            );
+            );    
     };
-
     
     return (
-        <>
-        <ToastContainer 
-                position="top-center" 
-                autoClose={5000} 
-                hideProgressBar={true} 
-                closeOnClick={true}
-                theme="colored"
-                toastClassName={styles.toast}
-            />
+        <>  
+            <ToastContainer
+            position="bottom-right"
+            autoClose={3000}
+            hideProgressBar={false}
+            newestOnTop={true}
+            closeOnClick={false}
+            pauseOnHover
+            draggable
+            theme="colored"
+        />
         <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className={styles.container}
+            className={styles.container}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.2}}
         >
             <motion.h1
                 className={styles.title}
@@ -84,7 +91,6 @@ const Contact = () => {
             >
                 Contáctame
             </motion.h1>
-           
             <form onSubmit={handleSubmit} className={styles.form} noValidate>
                 <motion.div
                     className={styles.formGroup}

@@ -100,18 +100,19 @@
     }
 }
 
-.toast-success {
+.toastSuccess {
     background-color: #4caf50 !important;
 }
 
-.toast-error {
+.toastError {
     background-color: #f44336 !important;
 }
 
-.Toastify__toast-container {
-    position: fixed; 
-    z-index: 1050;
+.ToastifyToastContainer {
+    position: relative; 
     pointer-events: auto;
+    z-index: 9999 !important;  
+    overflow: visible;
 }
 
 :target {

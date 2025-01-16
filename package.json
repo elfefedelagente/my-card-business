@@ -15,13 +15,13 @@
     "emailjs-com": "^3.2.0",
     "framer-motion": "11.17.0",
     "motion": "^11.17.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.14.1",
     "react-scroll": "^1.9.0",
-    "react-toastify": "^11.0.2",
+    "react-toastify": "^11.0.3",
     "sass": "^1.83.1"
   },
   "devDependencies": {
