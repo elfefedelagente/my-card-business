@@ -70,3 +70,54 @@ nav ul li a {
     text-align: center;
     margin-bottom: 20px;
   }
+
+/* Responsivo para tabletas */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: row; /* Mantener la dirección horizontal */
+    justify-content: space-around; /* Distribuir uniformemente */
+    gap: 0; /* Eliminar espacio extra */
+  }
+
+  nav ul li {
+    margin: 0 10px; /* Ajustar márgenes para que se adapte */
+  }
+
+  nav ul li a {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  section {
+    padding: 80px 15px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 480px) {
+  nav {
+    padding: 0px;
+    margin-top: -10px;
+    
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 24px; 
+  }
+
+  nav ul li {
+    margin: 0px 6px; /* Ajustar márgenes para espacios reducidos */
+  }
+
+  nav ul li a {
+    font-size: 9px;
+    padding: 0px 1px;
+  }
+
+}

@@ -13,12 +13,7 @@
     box-sizing: border-box;
     margin-bottom: 0;
 }
-@media (max-width: 768px) {
-    .skillsContainer {
-        flex-direction: column; 
-        gap: 20px; 
-    }
-}
+
 
 .skillsContainer {
     padding: 20px;
@@ -45,19 +40,6 @@
     border-radius: 5px;
     max-width: 100%;
     overflow: hidden;
-}
-
-@media (max-width: 768px) {
-    .skillsContainer {
-        flex-direction: column; 
-        gap: 20px; 
-    }
-}
-
-@media (min-width: 768px) {
-    .skillsContainer {
-        flex-wrap: nowrap;
-    }
 }
 
 .progressBar {
@@ -97,3 +79,109 @@
     gap: 10px; 
     margin-bottom: 16px; 
   }
+
+  /* Media queries para tabletas */
+@media (max-width: 768px) {
+    .skillsBackground {
+      padding: 30px 15px;
+      background-position: center top;
+      background-size: cover;
+      border-radius: 8px;
+      min-height: auto;
+    }
+  
+    .skillsContainer {
+      flex-direction: column; /* Apilar columnas */
+      gap: 20px; /* Reducir el espacio entre columnas */
+    }
+  
+    .title {
+      font-size: 24px; /* Ajustar tamaño de fuente */
+      margin-bottom: 20px;
+    }
+  
+    .leftColumn,
+    .rightColumn {
+      max-width: 100%; /* Asegura que ocupen todo el ancho disponible */
+      flex: none;
+    }
+  
+    .barContainer {
+      height: 6px; /* Reducir el tamaño de la barra */
+    }
+  
+    .progressBar {
+      height: 100%;
+    }
+  
+    .level {
+      font-size: 12px; /* Reducir el tamaño del texto */
+    }
+  
+    .skillItem {
+      flex-direction: column; /* Apilar contenido */
+      align-items: flex-start; /* Alinear a la izquierda */
+    }
+  
+    .icon {
+      width: 20px; /* Reducir el tamaño de los íconos */
+      height: 20px;
+    }
+  
+    .section {
+      gap: 8px; /* Reducir el espacio entre elementos */
+      margin-bottom: 12px;
+    }
+  }
+  
+  /* Media queries para móviles */
+  @media (max-width: 480px) {
+    .skillsBackground {
+      padding: 20px 10px;
+      border-radius: 5px;
+      background-position: top;
+    }
+  
+    .skillsContainer {
+      gap: 10px; /* Menor espacio entre elementos */
+    }
+  
+    .title {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .barContainer {
+      height: 4px; /* Aún más pequeña la barra */
+    }
+  
+    .progressBar {
+      height: 100%;
+    }
+  
+    .level {
+      font-size: 10px; /* Ajustar el tamaño del texto */
+    }
+  
+    .skillItem {
+      flex-direction: column; /* Apilar íconos y texto */
+      gap: 5px; /* Reducir el espacio entre íconos y texto */
+      margin-bottom: 6px;
+    }
+  
+    .icon {
+      width: 16px; /* Reducir íconos aún más */
+      height: 16px;
+    }
+  
+    .section {
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+  
+    .leftColumn,
+    .rightColumn {
+      max-width: 100%; /* Asegurar que las columnas ocupen el ancho completo */
+    }
+  }
+  

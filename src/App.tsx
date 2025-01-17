@@ -36,7 +36,7 @@ const App = () => {
               <h1 className={styleInit.title}> Soy Cabaña Federico </h1>                             
               
               <p className={styleInit.description}>
-                Me gusta la tecnología y como crece el día a día, hasta impresiona saber como puede cambiar la vida de las personas haciendo todo mas facil y a la vez más dificil para otras.
+                Me gusta la tecnología y como crece el día a día, hasta me impresiona saber como puede cambiar la vida de las personas haciendo todo mas facil y a la vez más dificil para otras.
                 <br />
                 Soy estudiante de la <strong>Universidad Nacional de la Patagonia San Juan Bosco</strong>, donde curso las carreras de <strong>Analista Programador Universitario y Licenciatura en Sistemas</strong>.
                 A lo largo de mi formación, he adquirido experiencia en diversas tecnologías como <strong>Arduino, Microchip, C, C#, Java, Python, React, y Django</strong>, además de trabajar con lenguajes de bajo nivel como Assembler. También he aprendido a interpretar y crear documentación técnica detallada, como diagramas de secuencia de estados de objetos, y a aplicar <strong>metodologías ágiles en el desarrollo de proyectos</strong>, lo que me permite adaptarme a equipos de trabajo dinámicos y enfocados en la entrega incremental de valor. 

@@ -6,7 +6,7 @@
           rgba(0, 0, 0, 0.5),
           rgba(0, 0, 0, 0.5)
       ),
-      url('/public/images/BackgroundPortfolio.jpg'); 
+      url('/images/BackgroundPortfolio.jpg'); 
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
@@ -111,5 +111,91 @@
     font-size: 18px;
     color: #333;
   }
-  
+
+/* Media queries para tabletas */
+@media (max-width: 768px) {
+  .portfolioBackground {
+    padding: 30px 15px;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .portfolioContainer {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  .imageGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 8px;
+    padding: 15px;
+  }
+
+  .imageWrapper:hover {
+    transform: scale(1.1); /* Reduce el efecto hover */
+  }
+
+  .viewButton {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .modalContent img {
+    max-width: 80%;
+    max-height: 70vh;
+  }
+
+  .modalContent p {
+    font-size: 16px;
+  }
+}
+
+/* Media queries para móviles */
+@media (max-width: 480px) {
+  .portfolioBackground {
+    padding: 20px 10px;
+    background-position: center top;
+  }
+
+  .portfolioContainer {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .imageGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .image {
+    border-radius: 8px;
+  }
+
+  .imageWrapper:hover {
+    transform: scale(1.05); /* Aún más suave en móviles */
+  }
+
+  .viewButton {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .modalContent img {
+    max-width: 90%;
+    max-height: 60vh;
+  }
+
+  .modalContent p {
+    font-size: 14px;
+  }
+}
   

@@ -58,3 +58,68 @@
     z-index: 0;
     animation: gradientShift 15s ease infinite;
   }
+
+  /* Media queries para tabletas */
+@media (max-width: 768px) {
+  .section {
+    min-height: 80vh;
+    padding: 10px;
+  }
+
+  #init {
+    margin-bottom: 60px;
+  }
+
+  #aboutMe {
+    margin-bottom: 20px;
+  }
+
+  #skills,
+  #myProyect,
+  #contact {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .backgroundAnimated {
+    padding: 15px;
+    background-size: 400% 400%; /* Ajusta la velocidad del fondo animado */
+  }
+}
+
+/* Media queries para móviles */
+@media (max-width: 480px) {
+  .section {
+    min-height: 70vh;
+    padding: 5px;
+  }
+
+  #init {
+    margin-bottom: 40px;
+  }
+
+  #aboutMe {
+    height: 100vh;
+    padding: 20px;
+  }
+
+  #skills,
+  #myProyect,
+  #contact {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  main {
+    padding: 5px;
+  }
+
+  .backgroundAnimated {
+    padding: 10px;
+    background-size: 500% 500%; /* Ajusta aún más la velocidad del fondo animado */
+  }
+}

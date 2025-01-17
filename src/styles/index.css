@@ -13,6 +13,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+
 /* Estilos para pantallas medianas (tabletas) */
 @media (max-width: 768px) {
   body {
