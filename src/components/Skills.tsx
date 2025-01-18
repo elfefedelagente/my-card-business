@@ -14,7 +14,6 @@ import nextJsIcon from "../assets/nextjs-icon.svg";
 import fastApiIcon from "../assets/fastapi-1.svg";
 import nodeJsIcon from "../assets/node-js-icon.svg";
 import bootstrapIcon from "../assets/bootstrap-4-icon.svg"
-import { style } from "framer-motion/client";
 
 const Skills = () => {
 

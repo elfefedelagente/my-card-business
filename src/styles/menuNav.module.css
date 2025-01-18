@@ -5,30 +5,36 @@ body {
   }
   
 nav {
-    position: fixed; 
-    top: 0;
-    left: 50%;
-    margin: 0 auto;
-    background-color: #333;
-    transform: translateX(-50%);
-    z-index: 10;
-    width: 100%;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center; 
-    border-radius: 8px;         
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #4CAF50, #2196F3);
+  z-index: 10;
+  width: 90%; 
+  max-width: 1200px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: all 0.3s ease-in-out; 
   }
+
+  nav:hover {
+    transform: translateX(-50%) scale(1.02); 
+}
 
 nav ul {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
     list-style-type: none;
-    
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 15px;
     border-radius: 15px;
 }
 
@@ -36,24 +42,27 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
-    padding: 0 20px;
-    transition: background-color 0.3s;
-  }
-
-  nav ul li a:hover {
-    background-color: #555;
+    font-weight: bold; 
+    padding: 10px 15px;
     border-radius: 10px;
-  }
+    transition: all 0.3s ease-in-out;
+}
 
-  main {
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;    
-    padding-top: 100px;
-  }
+    width: 100%;
+    padding-top: 120px;
+}
 
-  section {
+section {
     padding: 100px 20px;
     min-height: 100vh;
     position: relative;
@@ -61,25 +70,25 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     overflow: visible;
-    margin-bottom: 40px; 
+    margin-bottom: 40px;
     z-index: 1;
-  }
-  
-  section h2 {
+}
+
+section h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
+}
 
 /* Responsivo para tabletas */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: row; /* Mantener la dirección horizontal */
-    justify-content: space-around; /* Distribuir uniformemente */
-    gap: 0; /* Eliminar espacio extra */
+    flex-direction: row; 
+    justify-content: space-around;
+    gap: 0; 
   }
 
   nav ul li {
-    margin: 0 10px; /* Ajustar márgenes para que se adapte */
+    margin: 0 10px; 
   }
 
   nav ul li a {
@@ -99,25 +108,40 @@ nav ul li a {
 /* Responsivo para Iphone X */
 @media (max-width: 480px) {
   nav {
-    padding: 0px;
-    margin-top: -10px;    
+    padding: 5px 10px; /* Reduce el padding pero deja espacio suficiente */
+    margin-top: 0; /* Elimina márgenes negativos */
     position: fixed;
     display: flex;
+    width: 100%; /* Se asegura de ocupar todo el ancho */
+    background: linear-gradient(90deg, #4CAF50, #2196F3); /* Conserva el gradiente */
+    border-radius: 0; /* Remueve bordes redondeados para mejor adaptación */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
   }
 
   nav ul {
     flex-direction: row;
-    justify-content: center;
-    gap: 10px; 
+    justify-content: space-around; /* Espacio uniforme entre elementos */
+    width: 100%; /* Asegura que los elementos llenen el contenedor */
+    padding: 0;
+    margin: 0;
+    gap: 0; /* Elimina el gap extra */
   }
 
   nav ul li {
-    margin: 0px 6px; 
+    margin: 0; /* Elimina márgenes horizontales */
   }
 
   nav ul li a {
-    font-size: 9px;
-    padding: 0px 1px;
+    font-size: 12px; /* Tamaño de texto más legible */
+    padding: 5px 8px; /* Espaciado adecuado para pantallas táctiles */
+    color: white;
+    text-decoration: none;
+    border-radius: 4px; /* Borde sutil para un diseño más limpio */
+    transition: all 0.2s ease-in-out;
   }
 
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover sencillo y atractivo */
+    color: #f1f1f1;
+  }
 }
