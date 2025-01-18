@@ -25,7 +25,7 @@ const Portfolio = () => {
 
   return (
     <div className={styles.portfolioContainer}>
-      <h1 className={styles.title}><strong>Red de monitoreo ambiental Rio Chubut</strong></h1>
+      <h1 className={styles.title}><strong>Red de monitoreo ambiental <br /> Rio Chubut</strong></h1>
       <div className={styles.imageGrid}>
         {images.map((image, index) => (
           <motion.div

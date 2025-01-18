@@ -172,7 +172,7 @@
     }
   }
   
-  /* Media queries para móviles */
+  /* Responsivo para Iphone X */
   @media (max-width: 480px) {
     .contactBackground {
       padding: 20px 10px;
@@ -183,6 +183,7 @@
       width: 44%;
       padding: 1.5rem;
       min-width: auto;
+      margin-top: -180px;
     }
   
     .title {
