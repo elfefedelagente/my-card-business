@@ -77,10 +77,7 @@ const App = () => {
         </section>
       </main>      
       <footer >        
-        {/**
-         
         <p>&copy; 2025 Cabaña Federico. Todos los derechos reservados.</p>
-         */}
       </footer>
     </div>
   );

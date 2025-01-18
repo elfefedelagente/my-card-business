@@ -34,7 +34,7 @@
     border: 3px solid #4caf50;
     display: flex;
     justify-content: center;
-    margin-top: -10px;
+    top: 50px;
     left: 40%;
 }
   
@@ -81,6 +81,8 @@
     display: flex;
     flex-direction: column;
     gap: 2.8rem; 
+    position: relative;
+    margin-top: 300px;
 }
 
 .interestsList li {
@@ -217,7 +219,7 @@
       position: relative;      
       max-width: 90%;
       left: 1%;  
-      top: -50px;    
+      top: -40;    
     }
   
     .interestsList {
