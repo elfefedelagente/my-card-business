@@ -154,7 +154,7 @@
   }
 }
 
-/* Media queries para móviles */
+/* Responsivo para Iphone X */
 @media (max-width: 480px) {
   .portfolioBackground {
     padding: 20px 10px;
@@ -163,18 +163,22 @@
 
   .portfolioContainer {
     padding: 10px;
+    height: 100vh;
+    position: relative;
   }
 
   .title {
     font-size: 20px;
     margin-bottom: 20px;
+    margin-top: 50px;
   }
 
   .imageGrid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+    gap: 50px;
     padding: 10px;
     width: 100%;
+    margin-top: 60px;
   }
 
   .image {

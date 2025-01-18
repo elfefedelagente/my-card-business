@@ -134,7 +134,7 @@
     }
   }
   
-  /* Media queries para móviles */
+  /* Responsivo para Iphone X */
   @media (max-width: 480px) {
     .skillsBackground {
       padding: 20px 10px;
@@ -143,12 +143,14 @@
     }
   
     .skillsContainer {
-      gap: 10px; /* Menor espacio entre elementos */
+      gap: 10px; 
+      position: relative;
     }
   
     .title {
       font-size: 20px;
       margin-bottom: 15px;
+      margin-top: 50px;
     }
   
     .barContainer {

@@ -138,7 +138,8 @@
 }
 
   /* IMPLEMENTACIÓN RESPONSIVA */
-  
+
+  /* Responsivo para tabletas */
   @media (max-width: 768px) {
     .container {
       padding: 20px;
@@ -156,11 +157,13 @@
       height: 40px;
     }
   }
-  
+ 
+  /* Responsivo para Iphone X */
   @media (max-width: 480px) {
     .title {
       font-size: 2rem;
-      position: relative;          
+      position: relative;       
+      top: 40px;   
     }
   
     .description {
@@ -173,17 +176,16 @@
     }
 
     .container{
-      height: 100vh;
+      height: auto;
     }
 
     .downloadButton {
       margin: 20px auto; 
       display: flex;
-      justify-content: center;
-      align-items: center;
+      left: 40%;
       font-size: 7px;
       width: 50px;
-      top: 40px;
+      top: -97px;
     }
   
     .iconsContainer svg,
@@ -192,7 +194,8 @@
       width: 35px;
       height: 35px;      
       position: relative;
-      top: 50px;
+      top: -20px;
+      right: 90%;
     }
   }
   

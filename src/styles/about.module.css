@@ -182,7 +182,7 @@
     }
   }
   
-  /* Media queries para móviles */
+  /* Responsivo para Iphone X */
   @media (max-width: 480px) {
     .aboutBackground {
       padding: 30px 10px;
@@ -210,9 +210,9 @@
   
     .frameBox {
       position: relative;      
-      max-width: 50%;
-      left: 40%;  
-      top: -10%;    
+      max-width: 90%;
+      left: 1%;  
+      top: 0%;    
     }
   
     .interestsList {

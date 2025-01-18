@@ -14,6 +14,7 @@ import nextJsIcon from "../assets/nextjs-icon.svg";
 import fastApiIcon from "../assets/fastapi-1.svg";
 import nodeJsIcon from "../assets/node-js-icon.svg";
 import bootstrapIcon from "../assets/bootstrap-4-icon.svg"
+import { style } from "framer-motion/client";
 
 const Skills = () => {
 
@@ -21,7 +22,7 @@ const Skills = () => {
         <div className={styles.skillsContainer}>
             <div className={styles.leftColumn}>
             {/* LENGUAJES DE PROGRAMACION Y IDEs */}
-            <h2>Lenguajes de programación e IDEs</h2>
+            <h2 className={styles.title}>Lenguajes de programación e IDEs</h2>
             {/* Python %80 */}
             <div className={styles.section}>
                 <h3>Python</h3>

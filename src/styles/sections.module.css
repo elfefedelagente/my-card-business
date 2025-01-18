@@ -91,7 +91,7 @@
   }
 }
 
-/* Media queries para móviles */
+/* Responsivo para Iphone X */
 @media (max-width: 480px) {
   .section {
     min-height: 70vh;
@@ -107,8 +107,8 @@
     padding: 20px;
   }
 
-  #skills,
   #myProyect,
+  #skills,
   #contact {
     margin-top: 40px;
     margin-bottom: 30px;
