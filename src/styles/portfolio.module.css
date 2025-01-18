@@ -172,12 +172,17 @@
 
   .imageGrid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 5px;
+    gap: 10px;
     padding: 10px;
+    width: 100%;
   }
 
   .image {
     border-radius: 8px;
+  }
+
+  .imageWrapper{
+    margin: 0 auto;
   }
 
   .imageWrapper:hover {

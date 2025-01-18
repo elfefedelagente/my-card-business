@@ -12,6 +12,8 @@
   position: relative;
   z-index: 1;  
   margin-top: -10px;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
@@ -88,6 +90,32 @@
   border-radius: 50%; 
 }
 
+.downloadButton {
+  position: relative;    
+  background-color: #007BFF;
+  margin: 0;
+  width: 9%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;  
+}
+
+.downloadButton:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.downloadButton:active {
+  background-color: #003f7f;
+}
+
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -132,6 +160,7 @@
   @media (max-width: 480px) {
     .title {
       font-size: 2rem;
+      position: relative;          
     }
   
     .description {
@@ -142,12 +171,28 @@
     .iconsContainer {
       gap: 15px;
     }
+
+    .container{
+      height: 100vh;
+    }
+
+    .downloadButton {
+      margin: 20px auto; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 7px;
+      width: 50px;
+      top: 40px;
+    }
   
     .iconsContainer svg,
     .iconsContainer i,
     .iconsContainer img {
       width: 35px;
-      height: 35px;
+      height: 35px;      
+      position: relative;
+      top: 50px;
     }
   }
   
@@ -165,6 +210,7 @@
   
   .container {
     animation: fadeIn 1.5s ease-in-out;
+
   }
   
   
@@ -186,29 +232,4 @@
     opacity: 0;
     animation: fadeIn 1s ease-in-out 1s;
     animation-fill-mode: forwards; 
-  }
-
-  .downloadButton {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 2;
-  }
-  
-  .downloadButton:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-  }
-  
-  .downloadButton:active {
-    background-color: #003f7f;
   }

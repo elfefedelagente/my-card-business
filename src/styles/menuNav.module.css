@@ -16,8 +16,7 @@ nav {
     padding: 10px 0;
     display: flex;
     justify-content: center; 
-    border-radius: 8px;     
-    z-index: 10;
+    border-radius: 8px;         
   }
 
 nav ul {
@@ -101,8 +100,10 @@ nav ul li a {
 @media (max-width: 480px) {
   nav {
     padding: 0px;
-    margin-top: -10px;
-    
+    margin-top: -10px;    
+    position: fixed;
+    display: flex;
+
   }
 
   nav ul {
