@@ -7,22 +7,25 @@
     min-height: 100vh; 
     margin: 0; 
     position: relative;
+    width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
-  #init {
-    margin-bottom: 80px;
-  }
   
   #aboutMe {
     margin-top: 0; 
     margin-bottom: 0px;
+    overflow-x: hidden;
   }
   
+  #init,
   #skills,
   #myProyect,
   #contact {
-    margin-top: 80px;
-    margin-bottom: 60px;
+    overflow-x: hidden;
   }
 
   main {
@@ -34,7 +37,11 @@
   }
   
   .backgroundAnimated {
+    margin: 0;
+    padding: 0;
+    position: relative;
     position: relative; 
+    overflow-x: hidden;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -44,7 +51,7 @@
     padding: 20px;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: linear-gradient(
       -45deg,
@@ -87,7 +94,7 @@
 
   .backgroundAnimated {
     padding: 15px;
-    background-size: 400% 400%; /* Ajusta la velocidad del fondo animado */
+    background-size: 400% 400%;
   }
 }
 
@@ -96,22 +103,15 @@
   .section {
     min-height: 70vh;
     padding: 5px;
+    overflow-x: hidden;
   }
 
-  #init {
-    margin-bottom: 40px;
-  }
-
-  #aboutMe {
-    height: 100vh;
-    padding: 20px;
-  }
-
+  #aboutMe,
+  #init,
   #myProyect,
   #skills,
   #contact {
-    margin-top: 40px;
-    margin-bottom: 30px;
+    overflow-x: hidden;
   }
 
   main {

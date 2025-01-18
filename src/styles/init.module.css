@@ -95,8 +95,6 @@
   background-color: #007BFF;
   margin: 0;
   width: 9%;
-  justify-content: center;
-  align-items: center;
   color: white;
   padding: 10px 20px;
   font-size: 1rem;
@@ -105,6 +103,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;  
+  left: 40%;
 }
 
 .downloadButton:hover {
@@ -161,7 +160,7 @@
   /* Responsivo para Iphone X */
   @media (max-width: 480px) {
     .title {
-      font-size: 2rem;
+      font-size: 1.9rem;
       position: relative;       
       top: 40px;   
     }
@@ -176,7 +175,7 @@
     }
 
     .container{
-      height: auto;
+      height: 840px;
     }
 
     .downloadButton {

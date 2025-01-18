@@ -11,7 +11,7 @@
 
 .aboutBackground {
     position: relative;
-    width: 100%;
+    width: 100vw;
     padding: 50px 20px;
     background: linear-gradient(
             rgba(0, 0, 0, 0.5),
@@ -21,19 +21,20 @@
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    box-sizing: border-box;
 }
 
 
 .imagenAboutMe {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     position: absolute;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #4caf50;
     display: flex;
     justify-content: center;
-    margin-top: -100px;
+    margin-top: -10px;
     left: 40%;
 }
   
@@ -122,10 +123,10 @@
     border-radius: 15px; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 0; 
-    max-width: 600px;
+    max-width: 400px;
     animation: fadeSlideIn 0.8s ease-out;  
     position: relative;
-    left: 400px;
+    left: 300px;
 }
 
 @media (max-width: 768px) {
@@ -188,10 +189,13 @@
       padding: 30px 10px;
       background-position: center top;
       height: 100vh;
+      overflow-x: hidden;
     }
   
     .imagenAboutMe {      
-      top: 15%;      
+      position: relative;
+      top: 15%;
+      right: 50%;
     }
   
     .aboutContainer {
@@ -201,6 +205,7 @@
   
     .interestsContainer {
       transform: translateX(-10px);
+      top: -40px;
     }
   
     .mainContent {
@@ -212,7 +217,7 @@
       position: relative;      
       max-width: 90%;
       left: 1%;  
-      top: 0%;    
+      top: -50px;    
     }
   
     .interestsList {
