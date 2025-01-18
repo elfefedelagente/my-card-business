@@ -58,7 +58,7 @@
     opacity: 0; 
     transition: all 0.8s ease-out;
     position: relative;
-    right: 500px;
+    right: 250px;
     top: -190px;
 }
 
@@ -125,7 +125,7 @@
     max-width: 600px;
     animation: fadeSlideIn 0.8s ease-out;  
     position: relative;
-    left: 500px;
+    left: 400px;
 }
 
 @media (max-width: 768px) {
