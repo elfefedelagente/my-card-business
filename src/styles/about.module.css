@@ -14,8 +14,8 @@
     width: 100vw;
     padding: 50px 20px;
     background: linear-gradient(
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
         ),
         url('/images/BackgroundAboutMe.jpg'); 
     background-size: cover; 
@@ -28,7 +28,7 @@
 .imagenAboutMe {
     width: 200px;
     height: 200px;
-    position: absolute;
+    position: relative;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #4caf50;
@@ -75,6 +75,7 @@
   
 .interestsList {
     list-style: none;
+    width: 1100px;
     padding: 0;
     margin: 0;
     text-align: left;
@@ -83,6 +84,7 @@
     gap: 2.8rem; 
     position: relative;
     margin-top: 300px;
+    
 }
 
 .interestsList li {
@@ -91,7 +93,8 @@
     gap: 0.5rem; 
     font-family: 'Courier New', Courier, monospace;
     padding: 0.5rem 0;
-    
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .interestsList li div {
@@ -128,7 +131,7 @@
     max-width: 400px;
     animation: fadeSlideIn 0.8s ease-out;  
     position: relative;
-    left: 300px;
+    left: 10px;
 }
 
 @media (max-width: 768px) {
@@ -196,8 +199,8 @@
   
     .imagenAboutMe {      
       position: relative;
-      top: 15%;
-      right: 50%;
+      left: 60%;
+      top: 10%;
     }
   
     .aboutContainer {
@@ -219,17 +222,18 @@
       position: relative;      
       max-width: 90%;
       left: 1%;  
-      top: -40;    
+      top: -50px;
     }
   
     .interestsList {
       gap: 0.2rem;
-      top: 50px;      
+      margin-top: 10px;
     }
   
     .interestsList li div {
       font-size: 0.7rem;
       line-height: 1.4;
+      
     }
   
     .aboutParagraph {
