@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaPhone } from 'react-icons/fa';
 import React from 'react';
 import style from "../styles/init.module.css";
 
@@ -20,6 +20,13 @@ const ContactIcon: React.FC = () => {
                     size={24} 
                     color="#0077b5" 
                     style={{ cursor: 'pointer' }} 
+                />
+            </a>
+            <a href="tel:+542804708799" target='_blank' rel='noopener noreferrer' >
+                <FaPhone
+                    size={24}
+                    color='34C759'
+                    style={{ cursor: 'pointer' }}
                 />
             </a>
         </div>

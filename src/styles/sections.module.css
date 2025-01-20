@@ -113,6 +113,14 @@
   #contact {
     overflow-x: hidden;
   }
+  
+  footer {
+    all: unset;
+    padding: 10px;
+    text-align: center;
+    background-color: #333;
+    color: white;  
+}
 
   main {
     padding: 5px;
