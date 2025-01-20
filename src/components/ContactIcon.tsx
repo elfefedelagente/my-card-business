@@ -3,6 +3,8 @@ import React from 'react';
 import style from "../styles/init.module.css";
 
 const ContactIcon: React.FC = () => {
+    const phoneNumber = "+542804708799";
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
     return(
         <div className={style.iconsContainer}>
             {/* Ícono de GitHub */}
@@ -22,13 +24,24 @@ const ContactIcon: React.FC = () => {
                     style={{ cursor: 'pointer' }} 
                 />
             </a>
-            <a href="tel:+542804708799" target='_blank' rel='noopener noreferrer' >
-                <FaPhone
-                    size={24}
-                    color='34C759'
-                    style={{ cursor: 'pointer' }}
-                />
-            </a>
+            {isMobile ? (
+                <a href={`tel:${phoneNumber}`} rel="noopener noreferrer">
+                    <FaPhone 
+                        size={24} 
+                        color="#34C759" 
+                        style={{ cursor: 'pointer' }} 
+                    />
+                </a>
+            ) : (
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <FaPhone 
+                        size={24} 
+                        color="#34C759" 
+                        style={{ cursor: 'default', marginRight: '8px' }} 
+                    />
+                    <span style={{ color: '#FFFFFF' }}>{phoneNumber}</span>
+                </div>
+            )}
         </div>
     );
 };
