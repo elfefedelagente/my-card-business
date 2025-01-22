@@ -33,7 +33,7 @@ const ContactIcon: React.FC = () => {
                     />
                 </a>
             ) : (
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'normal' }}>
                     <FaPhone 
                         size={24} 
                         color="#34C759" 

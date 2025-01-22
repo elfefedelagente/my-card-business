@@ -103,7 +103,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s ease, transform 0.3s ease;  
-  left: 40%;
+  left: 40%;  
 }
 
 .downloadButton:hover {
@@ -186,7 +186,7 @@
       left: 40%;
       font-size: 7px;
       width: 50px;
-      top: -47px;
+      top: -25px;
     }
   
     .iconsContainer svg,
@@ -243,8 +243,11 @@
 
   .iconsContainer a {
     display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -260,7 +263,8 @@
   .iconsContainer svg,
   .iconsContainer i,
   .iconsContainer img {
-    opacity: 0;
+    opacity: 0;    
+    position: static;
     animation: fadeIn 1s ease-in-out 1s;
     animation-fill-mode: forwards; 
   }
