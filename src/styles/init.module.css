@@ -229,6 +229,28 @@
     animation-fill-mode: both;
   }
   
+  /* Desactiva el efecto hover temporalmente */
+  .disableHover svg:hover,
+  .disableHover a:hover {
+    transform: none;
+    box-shadow: none;
+  } 
+
+  .iconsContainer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .iconsContainer a.hoverEffect:hover {
+    transform: scale(1.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
   /* Animación para los íconos */
   .iconsContainer svg,
   .iconsContainer i,
